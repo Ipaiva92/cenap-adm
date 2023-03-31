@@ -13,7 +13,7 @@ function Home () {
   };
 
   return (
-    <div>
+    <div className="home-container">
     <input
       type="text"
       id="message"
@@ -31,7 +31,6 @@ function Home () {
     <h2>Name: {name}</h2>
 
     <h2>Password: {password}</h2>
-
   </div>
   )
 }
