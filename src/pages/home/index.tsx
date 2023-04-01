@@ -1,38 +1,35 @@
-import { SetStateAction, useState } from "react";
+import { useForm } from "react-hook-form";
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 
 function Home () {
-  const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
+  const schema = yup.object().shape({
+    email: yup.string().email("Email inválido ").required("Campo tem que ser obrigatorio"),
+    password: yup.string().required("Campo tem que ser obrigatorio"),
+  });
 
-  const handleChangeName = (event: { target: { value: SetStateAction<string>; }; }) => {
-    setName(event.target.value);
-  };
+  const { register, handleSubmit, formState: { errors } } = useForm({
+    resolver: yupResolver(schema) 
+  });
 
-  const handleChangePassword = (event: { target: { value: SetStateAction<string>; }; }) => {
-    setPassword(event.target.value);
-  };
+
+  const onSubmit = (data: any) => console.log(data);
 
   return (
-    <div className="home-container">
-    <input
-      type="text"
-      id="message"
-      name="message"
-      onChange={handleChangeName}
-    />
+    <>
+    <form onSubmit={handleSubmit(onSubmit)}>
 
-    <input
-      type="text"
-      id="message"
-      name="message"
-      onChange={handleChangePassword}
-    />
+      <label>Email:</label>
+      <input type="text" {...register("email", { required: true })} />
+      {errors.email && <span style={{color:"red"}}>{errors.email.message?.toString()}</span>}
 
-    <h2>Name: {name}</h2>
-
-    <h2>Password: {password}</h2>
-  </div>
-  )
+      <label>Password</label>
+      <input type="password" {...register("password", { required: true })} />
+      {errors.password && <span style={{color:"red"}}>{errors.password.message?.toString()}</span>}
+      <button type="submit" > Logar </button>
+    </form>
+    </>
+  );
 }
 
 export default Home
