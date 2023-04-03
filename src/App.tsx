@@ -1,7 +1,7 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Header from "./pages/header";
+import Header from "./components/header";
 import { AuthProvider } from "./contexts/auth";
 
 function App() {

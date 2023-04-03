@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/auth";
-import schema from "./login.schema";
+import schema from "../../config/schemas/login.schema";
 
 function Home() {
   const { isLoggedIn, login } = useContext(AuthContext);
