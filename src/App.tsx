@@ -1,22 +1,20 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/home";
+import Login from "./pages/login";
 import Header from "./components/header";
 import { AuthProvider } from "./contexts/auth";
 
 function App() {
   return (
     <>
-      <Header />
-      <div className="container">
-        <AuthProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Home />} />
-            </Routes>
-          </BrowserRouter>
-        </AuthProvider>
-      </div>
+      {/* <Header /> */}
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Login />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </>
   );
 }

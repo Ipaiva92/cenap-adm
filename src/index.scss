@@ -2,6 +2,8 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
   :root{
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
@@ -13,4 +15,9 @@ body{
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
   }
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
 }

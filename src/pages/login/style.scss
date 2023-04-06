@@ -1,0 +1,97 @@
+.login-container{
+    height: 100%;
+    width: 30vw;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10%;
+    align-items: center;
+    background: linear-gradient(#222, darkblue, black);
+    border-right: 3px solid orange;
+}
+
+.main-box-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+    border-radius: 5%;
+    border: 0.15em solid orange;
+}
+
+.login-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+#root {
+  background-image: url('../public/imgs/fundoCenap.jfif');
+  object-fit: cover;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.box > label > p {
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
+    color: #4f3131;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+.box > input {
+    margin-top: 0.15em;
+    margin-bottom: 0.15em;
+    background: none;
+    opacity: 80%;
+    border: none;
+    height: 2em;
+    width: 15em;
+    border-bottom: solid 1px black;
+    color: #222;
+    ¨
+    &:focus, &:valid {
+        box-shadow: none;
+        outline: none;
+          
+        &::-webkit-input-placeholder{
+            color : darkblue;
+            font-size: 11px;
+            transform: translate(-20px);
+            visibility: visible !important;
+        }
+    }
+}
+
+.box > span {
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    font-size: 0.8em;
+}
+
+#log {
+    border-radius: 5%;
+    border: none;
+    background-color: #3232fb;
+    height: 2em;
+    width: 5em;
+    font-size: 1em;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo{
+    width: auto;
+    height: auto;
+    
+}
+
+img {
+    height: 15vh;
+}
